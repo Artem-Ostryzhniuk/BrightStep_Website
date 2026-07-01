@@ -1,172 +1,261 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>BrightStep Tutoring | Maths & Physics Tutor</title>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>BrightStep Tutoring</title>
 
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      line-height: 1.6;
-      color: #1a1a1a;
-      background: #ffffff;
-    }
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-    .container {
-      max-width: 900px;
-      margin: 0 auto;
-      padding: 40px 20px;
-    }
+<style>
+:root{
+  --navy:#0F172A;
+  --blue:#2563EB;
+  --bg:#F8FAFC;
+  --card:#FFFFFF;
+  --muted:#475569;
+  --border:#E2E8F0;
+  --shadow:0 12px 30px rgba(15,23,42,0.08);
+  --radius:16px;
+}
 
-    header {
-      padding: 60px 20px 40px;
-      border-bottom: 1px solid #eee;
-    }
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:Inter, sans-serif;
+}
 
-    h1 {
-      font-size: 2.5rem;
-      margin: 0;
-    }
+body{
+  background:var(--bg);
+  color:var(--navy);
+  line-height:1.6;
+}
 
-    .subtitle {
-      color: #555;
-      margin-top: 8px;
-      font-size: 1.1rem;
-    }
+/* LAYOUT */
+.container{
+  max-width:1000px;
+  margin:auto;
+  padding:60px 20px;
+}
 
-    .tagline {
-      margin-top: 10px;
-      font-weight: bold;
-    }
+/* HERO */
+header{
+  background:linear-gradient(135deg,#0F172A,#1E293B);
+  color:white;
+  padding:80px 20px;
+}
 
-    section {
-      padding: 40px 0;
-      border-bottom: 1px solid #eee;
-    }
+.hero-inner{
+  max-width:1000px;
+  margin:auto;
+}
 
-    h2 {
-      font-size: 1.5rem;
-      margin-bottom: 10px;
-    }
+h1{
+  font-size:42px;
+  line-height:1.2;
+}
 
-    p {
-      margin: 10px 0;
-    }
+.subtitle{
+  margin-top:10px;
+  color:#cbd5e1;
+  font-size:18px;
+}
 
-    ul {
-      padding-left: 20px;
-    }
+.tagline{
+  margin-top:14px;
+  font-weight:500;
+  color:#e2e8f0;
+}
 
-    .btn {
-      display: inline-block;
-      padding: 12px 18px;
-      margin-top: 15px;
-      background: #1a73e8;
-      color: white;
-      text-decoration: none;
-      border-radius: 6px;
-      font-weight: bold;
-    }
+/* BUTTONS */
+.btn{
+  display:inline-block;
+  padding:12px 18px;
+  border-radius:12px;
+  font-weight:600;
+  text-decoration:none;
+  margin-top:20px;
+  transition:0.2s;
+}
 
-    .btn:hover {
-      background: #1558b0;
-    }
+.primary{
+  background:var(--blue);
+  color:white;
+}
 
-    .btn-secondary {
-      background: #444;
-      margin-left: 10px;
-    }
+.primary:hover{
+  transform:translateY(-2px);
+}
 
-    input, textarea {
-      width: 100%;
-      padding: 10px;
-      margin-top: 8px;
-      margin-bottom: 15px;
-      border: 1px solid #ccc;
-      border-radius: 6px;
-      font-family: inherit;
-    }
+.secondary{
+  background:transparent;
+  border:1px solid #334155;
+  color:white;
+  margin-left:10px;
+}
 
-    label {
-      font-weight: bold;
-    }
+/* SECTIONS */
+section{
+  margin-top:60px;
+}
 
-    footer {
-      text-align: center;
-      padding: 30px;
-      font-size: 0.9rem;
-      color: #777;
-    }
+h2{
+  font-size:26px;
+  margin-bottom:16px;
+}
 
-    @media (max-width: 600px) {
-      h1 {
-        font-size: 2rem;
-      }
-    }
-  </style>
+/* CARD GRID */
+.grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:16px;
+}
+
+.card{
+  background:var(--card);
+  padding:20px;
+  border-radius:var(--radius);
+  box-shadow:var(--shadow);
+}
+
+/* PRICING */
+.pricing{
+  background:white;
+  padding:30px;
+  border-radius:var(--radius);
+  box-shadow:var(--shadow);
+  text-align:center;
+}
+
+.price{
+  font-size:42px;
+  font-weight:700;
+  color:var(--navy);
+}
+
+/* FORM */
+input, textarea{
+  width:100%;
+  padding:12px;
+  border-radius:10px;
+  border:1px solid var(--border);
+  margin-top:8px;
+  margin-bottom:16px;
+  font-family:inherit;
+}
+
+button{
+  background:var(--blue);
+  color:white;
+  border:none;
+  padding:12px 18px;
+  border-radius:12px;
+  font-weight:600;
+  cursor:pointer;
+}
+
+button:hover{
+  transform:translateY(-2px);
+}
+
+/* CONTACT */
+.contact-box{
+  background:white;
+  padding:30px;
+  border-radius:var(--radius);
+  box-shadow:var(--shadow);
+}
+
+/* FOOTER */
+footer{
+  text-align:center;
+  padding:40px;
+  color:var(--muted);
+  font-size:14px;
+}
+
+/* RESPONSIVE */
+@media(max-width:900px){
+  .grid{grid-template-columns:1fr;}
+  h1{font-size:34px;}
+}
+</style>
 </head>
 
 <body>
 
-<header class="container">
-  <h1>Artem Ostryzhniuk</h1>
-  <div class="subtitle">Imperial College London Offer Holder</div>
-  <div class="tagline">Maths • Further Maths • Physics • Chemistry</div>
+<header>
+  <div class="hero-inner">
+    <h1>GCSE & A-Level Maths, Further Maths, Physics & Chemistry Tutor</h1>
 
-  <a class="btn" href="#contact">Book Free First Lesson</a>
+    <div class="subtitle">
+      Imperial College London Offer Holder
+    </div>
+
+    <div class="tagline">
+      Helping students build confidence, understand concepts and improve grades.
+    </div>
+
+    <a class="btn primary" href="#contact">Book Your Free First Lesson</a>
+    <a class="btn secondary" href="#subjects">View Subjects</a>
+  </div>
 </header>
 
 <main class="container">
 
-  <section>
-    <h2>About Me</h2>
-    <p>
-      I am an Imperial College London offer holder with strong academic background in Maths and Sciences.
-      I focus on building understanding and exam technique so students improve efficiently and confidently.
-    </p>
-  </section>
+<section>
+  <h2>Why BrightStep?</h2>
 
-  <section>
-    <h2>Subjects</h2>
-    <ul>
-      <li>GCSE Maths & Sciences</li>
-      <li>A-Level Maths</li>
-      <li>A-Level Further Maths</li>
-      <li>A-Level Physics</li>
-      <li>A-Level Chemistry</li>
-    </ul>
-  </section>
+  <div class="grid">
+    <div class="card">🎯 Personalised lessons</div>
+    <div class="card">🧠 Understanding first</div>
+    <div class="card">📈 Exam technique</div>
+  </div>
+</section>
 
-  <section>
-    <h2>Pricing</h2>
-    <p>£15/hour</p>
-    <p>First lesson: Free</p>
-  </section>
+<section>
+  <h2>About Me</h2>
+  <p>
+    I am an Imperial College London offer holder with strong academic background in Maths and Sciences.
+    I focus on understanding rather than memorisation, helping students build long-term confidence.
+  </p>
+</section>
 
-  <section>
-    <h2>Availability</h2>
-    <p>
-      Weekdays: 3 - 8 pm<br>
-      Weekends: Flexible<br>
-      Online via Google Meet
-      In-person at your home or in a public place in Aylesbury
-    </p>
-  </section>
+<section id="subjects">
+  <h2>Subjects</h2>
 
-  <section>
-    <h2>FAQ</h2>
-    <p><strong>Do you teach online?</strong><br>Yes.</p>
-    <p><strong>Which exam boards?</strong><br>AQA, Edexcel, OCR.</p>
-  </section>
+  <div class="grid">
+    <div class="card"><b>Maths</b><br>GCSE & A-Level</div>
+    <div class="card"><b>Further Maths</b><br>Pure & Applied</div>
+    <div class="card"><b>Physics</b><br>Mechanics & Electricity</div>
+    <div class="card"><b>Chemistry</b><br>Organic & Physical</div>
+  </div>
+</section>
 
-  <section id="contact">
-    <h2>Contact / Book Free Lesson</h2>
+<section>
+  <h2>Pricing</h2>
 
+  <div class="pricing">
+    <div class="price">£15/hour</div>
+    <p>First lesson FREE</p>
+  </div>
+</section>
+
+<section>
+  <h2>FAQ</h2>
+  <p><b>Do you teach online?</b><br>Yes.</p>
+  <p><b>Which exam boards?</b><br>AQA, Edexcel, OCR.</p>
+</section>
+
+<section id="contact">
+  <h2>Contact</h2>
+
+  <div class="contact-box">
     <p>Fill in the form and I will respond within 24 hours.</p>
 
-    <!-- Replace this URL with your Formspree endpoint -->
     <form action="https://formspree.io/f/xpqgjkoo" method="POST">
 
       <label>Name</label>
@@ -178,16 +267,16 @@
       <label>Message</label>
       <textarea name="message" rows="5" required></textarea>
 
-      <button class="btn" type="submit">
-        Request Free First Lesson
-      </button>
+      <button type="submit">Request Free First Lesson</button>
     </form>
 
-    <a class="btn btn-secondary" href="mailto:study@brightsteptutoring.co.uk">
+    <br/>
+
+    <a class="btn primary" href="mailto:study@brightsteptutoring.co.uk">
       Email Me Directly
     </a>
-
-  </section>
+  </div>
+</section>
 
 </main>
 
